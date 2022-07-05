@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaParaElControlOperativoDelAreaDeCapturas
 {
-    public partial class Form1 : Form
+    public partial class Inicio2 : Form
     {
-        public Form1()
+        public Inicio2()
         {
             InitializeComponent();
-        }
-
-        private void bt_conectarbd_Click(object sender, EventArgs e)
-        {
-            Clases.CConexion objetoconexion = new Clases.CConexion();
-            objetoconexion.establecerConexion();
         }
     }
 }
