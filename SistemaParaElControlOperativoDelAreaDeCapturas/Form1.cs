@@ -16,5 +16,11 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
         {
             InitializeComponent();
         }
+
+        private void bt_conectarbd_Click(object sender, EventArgs e)
+        {
+            Clases.CConexion objetoconexion = new Clases.CConexion();
+            objetoconexion.establecerConexion();
+        }
     }
 }

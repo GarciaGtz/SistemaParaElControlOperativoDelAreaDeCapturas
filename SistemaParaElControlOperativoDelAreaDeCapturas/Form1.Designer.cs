@@ -28,13 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.bt_conectarbd = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // bt_conectarbd
+            // 
+            this.bt_conectarbd.Location = new System.Drawing.Point(98, 147);
+            this.bt_conectarbd.Name = "bt_conectarbd";
+            this.bt_conectarbd.Size = new System.Drawing.Size(75, 23);
+            this.bt_conectarbd.TabIndex = 0;
+            this.bt_conectarbd.Text = "Conectar";
+            this.bt_conectarbd.UseVisualStyleBackColor = true;
+            this.bt_conectarbd.Click += new System.EventHandler(this.bt_conectarbd_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bt_conectarbd);
+            this.Name = "Form1";
             this.Text = "Form1";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button bt_conectarbd;
     }
 }
 
