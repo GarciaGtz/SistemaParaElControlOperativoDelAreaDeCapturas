@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace SistemaParaElControlOperativoDelAreaDeCapturas
 {
-    public partial class InicioDeSesion : Form
+    public partial class Parrilla : Form
     {
-        public InicioDeSesion()
+        public Parrilla()
         {
             InitializeComponent();
-        }
-
-        private void button_IniciarSesionIS_Click(object sender, EventArgs e)
-        {
-            Clases.CConexion objetoconexion = new Clases.CConexion();
-            objetoconexion.establecerConexion();
         }
     }
 }
