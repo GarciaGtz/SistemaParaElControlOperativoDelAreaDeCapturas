@@ -75,7 +75,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
 
         public string porUsuario(string usuario, string password)
         {
-            var url = $"http://localhost:9000/usuarios/autenticar";
+            var url = $"http://localhost:9000/users/login";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "POST";
             request.ContentType = "application/json";
