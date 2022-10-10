@@ -49,7 +49,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var url = $"https://jsonplaceholder.typicode.com/users";
+            var url = $"http://localhost:9000/programmations/latest";
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
             request.ContentType = "application/json";
@@ -66,6 +66,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                             string responseBody = objReader.ReadToEnd();
                             // Do something with responseBody
                             Console.WriteLine(responseBody);
+                            
                         }
                     }
                 }

@@ -140,5 +140,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                 return ("ERROR AL SOLICITAR INFORMACION.");
             }
         }
+
+       
     }
 }

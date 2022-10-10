@@ -34,6 +34,7 @@
             this.checkBox_Parrilla_Referencia = new System.Windows.Forms.CheckBox();
             this.checkBox_Parilla_Master = new System.Windows.Forms.CheckBox();
             this.button_Parrilla_guardar = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,12 +94,21 @@
             this.button_Parrilla_guardar.TabIndex = 6;
             this.button_Parrilla_guardar.Text = "Guardar";
             this.button_Parrilla_guardar.UseVisualStyleBackColor = true;
+            this.button_Parrilla_guardar.Click += new System.EventHandler(this.button_Parrilla_guardar_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(551, 144);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(219, 20);
+            this.textBox1.TabIndex = 7;
             // 
             // Parrilla
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button_Parrilla_guardar);
             this.Controls.Add(this.checkBox_Parilla_Master);
             this.Controls.Add(this.checkBox_Parrilla_Referencia);
@@ -122,5 +132,6 @@
         private System.Windows.Forms.CheckBox checkBox_Parrilla_Referencia;
         private System.Windows.Forms.CheckBox checkBox_Parilla_Master;
         private System.Windows.Forms.Button button_Parrilla_guardar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
