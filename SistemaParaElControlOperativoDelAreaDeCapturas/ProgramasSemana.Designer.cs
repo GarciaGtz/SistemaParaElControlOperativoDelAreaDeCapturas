@@ -34,7 +34,6 @@
             this.checkBox_Parrilla_Referencia = new System.Windows.Forms.CheckBox();
             this.checkBox_Parilla_Master = new System.Windows.Forms.CheckBox();
             this.button_Parrilla_guardar = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.btn_exportPDF = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -106,19 +105,12 @@
             this.button_Parrilla_guardar.UseVisualStyleBackColor = true;
             this.button_Parrilla_guardar.Click += new System.EventHandler(this.button_Parrilla_guardar_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(20, 55);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(155, 20);
-            this.textBox1.TabIndex = 7;
-            // 
             // btn_exportPDF
             // 
             this.btn_exportPDF.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.btn_exportPDF.Location = new System.Drawing.Point(26, 92);
+            this.btn_exportPDF.Location = new System.Drawing.Point(20, 67);
             this.btn_exportPDF.Name = "btn_exportPDF";
-            this.btn_exportPDF.Size = new System.Drawing.Size(149, 32);
+            this.btn_exportPDF.Size = new System.Drawing.Size(164, 32);
             this.btn_exportPDF.TabIndex = 8;
             this.btn_exportPDF.Text = "Exportar PDF";
             this.btn_exportPDF.UseVisualStyleBackColor = false;
@@ -151,7 +143,6 @@
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.btn_exportPDF);
-            this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(696, 274);
             this.panel2.Name = "panel2";
@@ -177,6 +168,8 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ProgramasSemana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Parrilla";
@@ -198,7 +191,6 @@
         private System.Windows.Forms.CheckBox checkBox_Parrilla_Referencia;
         private System.Windows.Forms.CheckBox checkBox_Parilla_Master;
         private System.Windows.Forms.Button button_Parrilla_guardar;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btn_exportPDF;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;

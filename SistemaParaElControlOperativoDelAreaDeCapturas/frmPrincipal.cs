@@ -14,34 +14,13 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
 {
     public partial class frmPrincipal : Form
     {
-        int tipoUsuario;
 
         public frmPrincipal()
         {
             InitializeComponent();
 
             this.txtNombre.AutoSize = true;
-            txtNombre.Text = "Hola! " + Session.nombre;
-            
-
-            tipoUsuario = Session.id_tipo;
-
-            if (tipoUsuario == 1)
-            {
-                this.subMenuRegistrarUsuario.Visible = true;
-                this.menuEstatus.Visible = true;
-            }
-            else
-            {
-                this.subMenuRegistrarUsuario.Visible = false;
-                
-            }
-        }
-
-        private void subMenuRegistrarUsuario_Click(object sender, EventArgs e)
-        {
-            frmRegistro frmRegistro = new frmRegistro();
-            frmRegistro.Visible = true;
+            txtNombre.Text = "Hola Bienvenido! " ;
         }
 
 
@@ -67,9 +46,6 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
             parrilla.Visible = true;
         }
 
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+  
     }
 }

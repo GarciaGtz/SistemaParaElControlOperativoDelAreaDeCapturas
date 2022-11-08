@@ -57,38 +57,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                             var json = new WebClient().DownloadString(url);
 
                             var m = JsonConvert.DeserializeObject<MiClase>(responseBody);
-                            /*
-                            for (int i = 0; i < m.semana_Programas.Count; i++)
-                            {
-                                if(m.semana_Programas[i].programa_Dia == "1")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Lunes";
-                                }else if(m.semana_Programas[i].programa_Dia == "2")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Martes";
-                                }
-                                else if (m.semana_Programas[i].programa_Dia == "3")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Miercoles";
-                                }
-                                else if (m.semana_Programas[i].programa_Dia == "4")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Jueves";
-                                }
-                                else if (m.semana_Programas[i].programa_Dia == "5")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Viernes";
-                                }
-                                else if (m.semana_Programas[i].programa_Dia == "6")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Sabado";
-                                }
-                                else if (m.semana_Programas[i].programa_Dia == "7")
-                                {
-                                    m.semana_Programas[i].programa_Dia = "Domingo";
-                                }
-
-                            }*/
+                            
 
                             for (int i = 0; i < m.semana_Programas.Count; i++)
                             {

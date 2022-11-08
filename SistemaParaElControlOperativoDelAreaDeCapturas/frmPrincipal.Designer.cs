@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.menuUsuarios = new System.Windows.Forms.ToolStripMenuItem();
-            this.subMenuRegistrarUsuario = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEstatus = new System.Windows.Forms.ToolStripMenuItem();
             this.subMenuParrilla = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCerrarSession = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,16 +44,18 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.HideSelection = false;
             this.txtNombre.Location = new System.Drawing.Point(520, 104);
             this.txtNombre.Name = "txtNombre";
+            this.txtNombre.ReadOnly = true;
+            this.txtNombre.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtNombre.Size = new System.Drawing.Size(176, 26);
             this.txtNombre.TabIndex = 2;
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
+            this.txtNombre.TabStop = false;
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuUsuarios,
             this.menuEstatus,
             this.menuCerrarSession});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
@@ -63,21 +63,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // menuUsuarios
-            // 
-            this.menuUsuarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.subMenuRegistrarUsuario});
-            this.menuUsuarios.Name = "menuUsuarios";
-            this.menuUsuarios.Size = new System.Drawing.Size(163, 20);
-            this.menuUsuarios.Text = "Administración de usuarios";
-            // 
-            // subMenuRegistrarUsuario
-            // 
-            this.subMenuRegistrarUsuario.Name = "subMenuRegistrarUsuario";
-            this.subMenuRegistrarUsuario.Size = new System.Drawing.Size(120, 22);
-            this.subMenuRegistrarUsuario.Text = "Registrar";
-            this.subMenuRegistrarUsuario.Click += new System.EventHandler(this.subMenuRegistrarUsuario_Click);
             // 
             // menuEstatus
             // 
@@ -127,6 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.pictureBox_logoIS);
             this.Controls.Add(this.pictureBox1);
@@ -149,8 +135,6 @@
 
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem menuUsuarios;
-        private System.Windows.Forms.ToolStripMenuItem subMenuRegistrarUsuario;
         private System.Windows.Forms.ToolStripMenuItem menuEstatus;
         private System.Windows.Forms.ToolStripMenuItem menuCerrarSession;
         private System.Windows.Forms.ToolStripMenuItem subMenuParrilla;
