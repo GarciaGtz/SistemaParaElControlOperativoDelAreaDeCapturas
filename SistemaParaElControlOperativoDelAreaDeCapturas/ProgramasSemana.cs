@@ -20,14 +20,21 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
     {
         private static string dateEnd;
         private static string dateStart;
+        private static string id_programacion;
 
         public ProgramasSemana(String id, String start, String end)
         {
             dateStart = start;
             dateEnd = end;
+            id_programacion = id;
             InitializeComponent();
             Console.WriteLine(id);
-            var url = $"http://localhost:9000/programmations/programs/"+id;
+            Cargar(id);
+        }
+
+        public void Cargar(String id)
+        {
+            var url = $"http://localhost:9000/programmations/programs/" + id;
             var request = (HttpWebRequest)WebRequest.Create(url);
             request.Method = "GET";
             request.ContentType = "application/json";
@@ -117,6 +124,9 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                             dataGridView1.DataSource = m.semana_Programas;
                             dataGridView1.Columns["_id"].Visible = false;
                             dataGridView1.Columns["programa_Estatus"].Visible = false;
+                            dataGridView1.Columns["hora_Inicio"].HeaderText = "Hora inicio";
+                            dataGridView1.Columns["hora_Fin"].HeaderText = "Hora Fin";
+                            dataGridView1.Columns["programa_Nombre"].HeaderText = "Nombre de programa";
 
                         }
                     }
@@ -231,6 +241,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
             {
                 // Handle error
             }
+            Cargar(id_programacion);
         }
 
 
@@ -414,7 +425,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                                 PdfWriter writer = PdfWriter.GetInstance(document, fileStream);
                                 document.Open();
 
-                                iTextSharp.text.Image pic = iTextSharp.text.Image.GetInstance("C:\\Users\\edgar\\Documents\\Onichan\\SistemaParaElControlOperativoDelAreaDeCapturas\\logo-televisa.png");
+                                iTextSharp.text.Image pic = iTextSharp.text.Image.GetInstance("D:\\Archivos de programa x86\\Visual\\repos\\SistemaParaElControlOperativoDelAreaDeCapturas\\SistemaParaElControlOperativoDelAreaDeCapturas\\logo-televisa.png");
                                 pic.ScalePercent(50);
                                 pic.SetAbsolutePosition(50, 770);
                                 document.Add(pic);

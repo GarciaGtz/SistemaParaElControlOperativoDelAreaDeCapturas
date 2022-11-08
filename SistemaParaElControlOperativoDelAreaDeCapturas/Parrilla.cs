@@ -47,7 +47,9 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
 
                             dataGridView1.Columns["_id"].Visible = false;
                             dataGridView1.Columns["semana_Inicio"].MinimumWidth = 142;
+                            dataGridView1.Columns["semana_Inicio"].HeaderText = "Inicio de semana";
                             dataGridView1.Columns["semana_Fin"].MinimumWidth = 142;
+                            dataGridView1.Columns["semana_Fin"].HeaderText = "Fin de semana";
                         }
                     }
                 }
