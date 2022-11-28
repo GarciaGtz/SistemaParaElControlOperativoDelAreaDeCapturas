@@ -37,7 +37,6 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
             frmLogin frm = new frmLogin();
             frm.Visible = true;
 
-            Session ss = new Session();
         }
 
         private void subMenuParrilla_Click(object sender, EventArgs e)

@@ -39,6 +39,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
+            this.btn_Parilla_IngRef = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,6 +130,7 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.btn_Parilla_IngRef);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.checkBox_Parrilla_Calificado);
             this.panel1.Controls.Add(this.button_Parrilla_guardar);
@@ -158,6 +160,16 @@
             this.label4.Size = new System.Drawing.Size(83, 20);
             this.label4.TabIndex = 10;
             this.label4.Text = "Utilidades:";
+            // 
+            // btn_Parilla_IngRef
+            // 
+            this.btn_Parilla_IngRef.Location = new System.Drawing.Point(122, 79);
+            this.btn_Parilla_IngRef.Name = "btn_Parilla_IngRef";
+            this.btn_Parilla_IngRef.Size = new System.Drawing.Size(75, 23);
+            this.btn_Parilla_IngRef.TabIndex = 10;
+            this.btn_Parilla_IngRef.Text = "Agregar";
+            this.btn_Parilla_IngRef.UseVisualStyleBackColor = true;
+            this.btn_Parilla_IngRef.Click += new System.EventHandler(this.btn_Parilla_IngRef_Click);
             // 
             // ProgramasSemana
             // 
@@ -196,5 +208,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btn_Parilla_IngRef;
     }
 }

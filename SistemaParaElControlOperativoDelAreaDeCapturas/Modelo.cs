@@ -7,51 +7,12 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.Json;
-
+using Microsoft.Win32.SafeHandles;
 
 namespace SistemaParaElControlOperativoDelAreaDeCapturas
 {
     class Modelo
     {
-        public int registro(Usuarios usuario)
-        {
-            MySqlConnection conexion = Conexion.getConexion();
-            conexion.Open();
-
-            string sql = "INSERT INTO usuarios (usuario, password, nombre, id_tipo) VALUES(@usuario, @password, @nombre, @id_tipo)";
-            MySqlCommand comando = new MySqlCommand(sql, conexion);
-            comando.Parameters.AddWithValue("@usuario", usuario.Usuario);
-            comando.Parameters.AddWithValue("@password", usuario.Password);
-            comando.Parameters.AddWithValue("@nombre", usuario.Nombre);
-            comando.Parameters.AddWithValue("@id_tipo", usuario.Id_tipo);
-
-            int resultado = comando.ExecuteNonQuery();
-
-            return resultado;
-        }
-
-        public bool existeUsuario(string usuario)
-        {
-            MySqlDataReader reader;
-            MySqlConnection conexion = Conexion.getConexion();
-            conexion.Open();
-
-            string sql = "SELECT id FROM usuarios WHERE usuario LIKE @usuario";
-            MySqlCommand comando = new MySqlCommand(sql, conexion);
-            comando.Parameters.AddWithValue("@usuario", usuario);
-
-            reader = comando.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         public class Usuario
         {
             public string nombre_Usuario { get; set; }
@@ -72,7 +33,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
             public bool usuario { get; set; }
             public bool usuario_web { get; set; }
         }
-
+        public static string accessToken;
         public string porUsuario(string usuario, string password)
         {
             var url = $"http://localhost:9000/users/login";
@@ -97,7 +58,7 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                 streamWriter.Close();
             }
 
-            Console.WriteLine("DATOS",jsonString);
+            Console.WriteLine("DATOS", jsonString);
 
             try
             {
@@ -114,7 +75,9 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                             // Do something with responseBody
                             Respuesta respuestaJson =
                                                 JsonSerializer.Deserialize<Respuesta>(responseBody);
-                            if(respuestaJson.acceso != "true")
+                            accessToken = respuestaJson.token;
+
+                            if (respuestaJson.acceso != "true")
                             {
                                 return respuestaJson.mensaje;
                             }
@@ -128,9 +91,9 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
                                 {
                                     return "USUARIO SIN PERMISOS PARA ACCEDER A SISTEMA.";
                                 }
-                               
+
                             }
-                            
+
                         }
                     }
                 }
@@ -141,6 +104,6 @@ namespace SistemaParaElControlOperativoDelAreaDeCapturas
             }
         }
 
-       
+
     }
 }
